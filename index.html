@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVE MUSIC! | Your Music, Your Way</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1db954;
+            --secondary-color: #191414;
+            --background-color: #121212;
+            --text-color: #fff;
+            --font-family-main: 'Roboto', sans-serif;
+            --font-family-alt: 'Poppins', sans-serif;
+        }
+
+        /* Reset Defaults */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-main);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--secondary-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-family: var(--font-family-alt);
+            color: var(--primary-color);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-family: var(--font-family-alt);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #1ed760;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 1rem;
+        }
+
+        .feature {
+            flex: 1 1 calc(33% - 2rem);
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            color: var(--text-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature img {
+            width: 100px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .feature img:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .feature p {
+            margin-bottom: 1rem;
+        }
+
+        .feature .btn {
+            font-size: 0.9rem;
+            padding: 0.5rem 1.5rem;
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: #aaa;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            header {
+                flex-wrap: wrap;
+            }
+
+            .hamburger {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--text-color);
+                font-size: 2rem;
+                cursor: pointer;
+                margin-left: auto;
+            }
+
+            header nav ul {
+                display: none;
+                flex-direction: column;
+                background: var(--secondary-color);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 1rem 0;
+            }
+
+            header nav ul.active {
+                display: flex;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .feature {
+                flex: 1 1 100%;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+            
+        }
+        #tour-dates{
+            text-align: center;
+        }
+        #gallery{
+            text-align: center;
+            text-decoration: underline;
+            margin: 1em;
+        }
+        h2{
+            text-align: center;
+            margin: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LIVE MUSIC!</h1>
+        <button class="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#home" aria-label="Navigate to Home">Home</a></li>
+                <li><a href="#features" aria-label="Navigate to Features">Features</a></li>
+                <li><a href="#premium" aria-label="Navigate to Premium">Premium</a></li>
+                <li><a href="#download" aria-label="Navigate to Download">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h2>Your Music, Your Way</h2>
+            <p>Millions of songs. No credit card needed.</p>
+            <button class="btn">Get LIVE MUSIC! Free</button>
+        </section>
+
+        <section class="features" id="features">
+            <h2>Explore Our Features</h2>
+            
+            <div class="feature">
+                <a href="https://youtu.be/oRdxUFDoQe0?si=RK-tfWNOLR8DhWCS"><img src="https://img.icons8.com/fluency/96/music.png" alt="Discover New Music Icon"></a>
+                <h3>Discover New Music</h3>
+                <p>Explore millions of tracks and curated playlists tailored for you.</p>
+                <button class="btn">Learn More</button>
+            </div>
+            <div class="feature">
+                <a href="https://youtu.be/n_FCrCQ6-bA?si=3LjDCwrsjKhFeJnU"><img src="https://img.icons8.com/fluency/96/headphones.png" alt="Listen Anywhere Icon"></a>
+                <h3>Listen Anywhere</h3>
+                <p>Stream music on your phone, tablet, or desktop anytime, anywhere.</p>
+                <button class="btn">Start Listening</button>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/fluency/96/vip.png" alt="Go Premium Icon">
+                <h3>Go Premium</h3>
+                <p>Enjoy ad-free music, offline listening, and high-quality audio.</p>
+                <button class="btn">Upgrade Now</button>
+            </div>
+        </section>
+
+        <section id="tour-dates">
+            <h2>Tour Dates</h2>
+            <ul>
+                <li>January 15, 2025 - New York City</li>
+                <li>February 10, 2025 - Los Angeles</li>
+                <li>March 5, 2025 - Chicago</li>
+                <li>April 20, 2025 - Miami</li>
+            </ul>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://assets.telegraphindia.com/telegraph/2022/Jun/1654539874_new-project.jpg"height=150px alt="Band Performance Photo">
+                <img src="https://www.vampr.me/wp-content/uploads/2024/01/anton-mislawsky-1B7vFqOn6og-unsplash-scaled-e1660098096630.webp"height=200px alt="Crowd Photo">
+                <img src="https://www.icmp.ac.uk/sites/default/files/new/how_to_promote_live_events_blog_2022_1.jpg"height=150px alt="Video Thumbnail">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('header nav ul li a').forEach(link => {
+            link.addEventListener('click'), (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
